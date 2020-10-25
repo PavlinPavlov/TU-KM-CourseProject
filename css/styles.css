@@ -1,5 +1,17 @@
 #pageContent {
-	background-color: white;
+	/* background-color: #8c8c8c; */
 	margin: 40px auto;
+	border: 2px solid #33ccff;
 	border-radius: 45px;
+	color: #33ccff;
+	padding: 50px;
+}
+
+h1.main-header {
+	color: #ffffff;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	font-weight: 800;
+	font-size: 55px;
 }
