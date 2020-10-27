@@ -1,5 +1,7 @@
-p {
+p, li{
 	line-height: 25px;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 #pageContent {
@@ -9,6 +11,12 @@ p {
 	border-radius: 45px;
 	color: #33ccff;
 	padding: 50px;
+}
+
+#pageContent ul li {
+	margin-left: 55px;
+	line-height: 25px;
+	font-size: 1rem;
 }
 
 h1.main-header {
@@ -37,4 +45,8 @@ h1.main-header {
   text-align: right;
   font-style: italic;
   font-size: 16px;
+}
+
+hr {
+  background-color: #ffffff;
 }
