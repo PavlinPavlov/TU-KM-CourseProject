@@ -6,6 +6,8 @@
   width: 80%;
 }
 
-li {
+#diff-list li {
   margin-left: 55px;
+  line-height: 25px;
+  font-size: 1rem;
 }
