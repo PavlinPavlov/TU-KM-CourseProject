@@ -5,21 +5,22 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/tooplate-style.css">
 	<link rel="stylesheet" href="css/styles.css">
-	
+	<link rel="stylesheet" href="css/main_info.css">
+
 	<title>Основна информация</title>
 </head>
 <body>
 
 	<div class="row">
-	
+
 		<div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">
 
 			<button id="tmMainNavToggle" class="menu-icon">&#9776;</button>
 
 			<div class="inner">
-					
+
 				<h1><b>TPC/UDP</b></h1>
-					
+
 				<nav id="tmMainNav" class="tm-main-nav">
 					<ul>
 						<li>
@@ -33,7 +34,7 @@
 								<i class="fas fa-star tm-nav-fa-icon"></i>
 								<span>Основна информация</span>
 							</a>
-						</li>							
+						</li>
 						<li>
 							<a href="connect.html" >
 								<i class="fas fa-plug tm-nav-fa-icon"></i>
@@ -68,18 +69,38 @@
 				</nav>
 			</div>
 		</div> <!-- end of sidebar with nav -->
-		
+
 		<section id="pageContent" class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
 			<h1 class="main-header">Основна информация</h1>
-			
-			<p>	TCP е един от основните протоколи за управление на обмена на данни на различни машини в една мрежа. Чрез него се реализират връзките между клиент-сървър или сървър-сървър. Най-често е използван заедно с IP (Internet protocol), комбинацията е наречена TCP/IP.</p>
-			<p>	TCP взема данни от горните слоеве на OSI модела и ги разделя на пакети. Всеки пакет съдържа служебна част (header, meta-data) и част от данните. При разделяне на съобщението на пакети, всеки пакет се изпраща поотделно към получателя. В тази служебна информация се съдържа номер, който определя последователността на пакетите.</p> 
-			<img src="img/placeholder.png" />
-			<img src="img/placeholder.png" />
+
+			<p>&emsp;TCP (Transmission Control Protocol) е един от основните протоколи за управление на обмена на данни на различни машини в една мрежа. Чрез него се реализират връзките между клиент-сървър или сървър-сървър. Най-често е използван заедно с IP (Internet protocol), комбинацията е наречена TCP/IP (сходна с OSI) (Фиг. 1).</p>
+
+			<div id="fig-1" class="figure">
+				<img src="img/TCP-IP-model-vs-OSI-model.png" />
+				<span>Фиг. 1 OSI и TCP/IP моделите</span>
+			</div>
+
+			<p>&emsp;TCP взема данни от горните слоеве на OSI модела и ги разделя на пакети. Всеки пакет съдържа служебна част (header, meta-data) и част от данните. При разделяне на съобщението на пакети, всеки пакет се изпраща поотделно към получателя. В тази служебна информация се съдържа номер, който определя последователността на пакетите.</p>
+			<p>&emsp;UDP (User Datagram Protocol) е другия протокол за обмен на данни по мрежата. Въпреки, че е по-рядко използван от TCP, UDP позволява по-лесна комуникация с по-малко overhead (Фиг. 2). Той се използва предимно при комуникация където е необходимо преносът на данни да се извършва в реално време, дори това да доведе до загума на част от данните.</p>
+
+			<div id="fig-2" class="figure">
+				<img src="img/communication-diff.png" />
+				<span>Фиг. 2 Разлика в комуникацията на TCP и UDP</span>
+			</div>
+
+			<p>&emsp;Някои от сновните разлики (обяснени в детайли в другите страници) са:</p>
+
+			<ul>
+				<li>TCP установява и поддържа връзка, за разлика от UDP,</li>
+				<li>TCP предлага повторно изпращане на пакети при загуба.</li>
+				<li>UDP предава данните с по-малко overhead и значително по-малки служебни данни, с което значително нараства скоростта.</li>
+				<li>TCP може да регулира скоростта на изпращане, спрямо възможностите на получателя да ги обработва (flow control).</li>
+			</ul>
+
 		</section>
 	</div> <!-- End of row div -->
-	
-	
+
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script></body>
 
