@@ -1,4 +1,4 @@
-p, li{
+p, li {
 	line-height: 25px;
 	text-align: justify;
 	text-justify: inter-word;
@@ -49,4 +49,19 @@ h1.main-header {
 
 hr {
   background-color: #ffffff;
+}
+
+.note {
+		display: block;
+		margin: 20px auto;
+		padding: 15px 30px;
+		width: 75%;
+		color: #ffffff;
+		background-color: #ffa526;
+		font-size: 16px;
+		border-radius: 15px;
+}
+
+.note-icon {
+	margin-right: 15px;
 }
