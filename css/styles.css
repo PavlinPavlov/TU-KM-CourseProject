@@ -19,6 +19,18 @@ p, li {
 	font-size: 1rem;
 }
 
+#direct-home {
+	width: 125px;
+	padding: 10px;
+	margin: 80px auto;
+	border: #33ccff solid 2px;
+	border-radius: 15px;
+}
+
+#direct-home i{
+	margin-right: 10px;
+}
+
 h1.main-header {
 	color: #ffffff;
 	text-align: center;

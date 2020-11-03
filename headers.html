@@ -1,0 +1,64 @@
+<html>
+  <head>
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+  	<link rel="stylesheet" href="css/fontawesome-all.min.css"> <!-- Icons -->
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/tooplate-style.css">
+  	<link rel="stylesheet" href="css/styles.css">
+
+  	<title>Служебни данни</title>
+  </head>
+  <body>
+  	<div class="row">
+      <section class="col-xl-2 col-lg-2 col-md-1 col-sm-1">
+        <div id="direct-home"><a href="index.html"><i class="fas fa-home"></i>Начало</a></div>
+      </section>
+  		<section id="pageContent" class="col-xl-8 col-lg-8 col-md-10 col-sm-10">
+  			<h1 class="main-header">Служебни данни</h1>
+
+        <h2>Служебни данни при TCP комуникация</h2>
+
+        <div id="fig-1" class="figure">
+  				<img src="img/tcp-headers.png" />
+  				<span>Фиг. 1 Разпределение на байтовете в един пакет при TCP.</span>
+  			</div>
+
+        <ul>
+          <li><b>Source port</b> – номер на порта на предаващата страна - 16 битово число.
+          <li><b>Destination port</b> – номер на порта на приемащата страна -  16 битово число.
+          <li><b>Sequence Number</b> – пореден номер на всеки пакет, започва като случайно число в интервала [0, 4 294 967 295]. Всеки следващ пакет инкрементира този номер с единица - <i>32 битово число</i></li>
+          <li><b>Acknowledgement Number</b> – Номер на приетия пакет, използван за даване на информация, че пакекът е приет – <i>32 битово число</i></li>
+          <li><b>Head</b> – Посочва от кой байт започват същинските данни - стойността в винаги в граници [20 bytes, 60 bytes]</li>
+          <span class="note"><i class="far fa-sticky-note note-icon"></i><b>Забележка:</b><br/>&emsp;Първите 5 реда заемат 20 bytes (5 * 32 bits). Те са задължителни, поради това същинските данни започват най-малко след 20-тия byte. След тях за опциите, които не са задължителни. Те могат да достигнат 40 bytes, с което ще преместят данните след 60-тия byte.
+            Header полето е 4 bit-ово, което означава, че е може да държи числа в интервал [0, 15]. За да се определи дължината на служебните данни (включително опциите) това число се умножава по 4 bytes.</span>
+          <li><b>Reserved</b> – не се използват.</li>
+          <li><b>URG</b> – при =1 показва, че данните са спешни за обработка, спешните данни се обработват на друг канал.</li>
+          <li><b>ACK</b> – при =1 показва, че Acknowledgement номерът в TCP хедъра е валиден. =0 само при установяване на връзка hadnshake.</li>
+          <li><b>PSH</b> – при =1 използва се за да се изпрати целия буфер към получателя. Не е желателно да се използва, защото нарушава работата на процесора на получателя.</li>
+          <li><b>RST</b> – при =1 сигнализира на получателя веднага да се прекъсне връзката. И двете страни прекъсват връзките си, и освобождават ресурси. Може да се загубят данни, които са останали в транзит. Използва се при фатални грешки или връзката не може да бъде терминирана по нормален начин.</li>
+          <li><b>SYN</b> – използва се за синхронизация на sequence number, при =1 се сигнализира, че изпратения sequence number е началния (това става по врем на handshaek)</li>
+          <li><b>FIN</b> – при =1 сигнализира, желание да се прекрати връзката.</li>
+          <li><b>Window size</b> – Поличателят отговаря със свободното пространство на буферът си. Използва се за да се намали скоростта на изпращане на данни.</li>
+          <li><b>Checksum</b> – използва се за верификация на данните, получателят може да провери дали данните не са променени по врем на транзит.</li>
+        </ul>
+
+        <h2>Служебни данни при UDP комуникация</h2>
+
+        <div id="fig-2" class="figure">
+  				<img src="img/udp-headers.png" />
+  				<span>Фиг. 2 Разпределение на байтовете UDP.</span>
+  			</div>
+
+        <ul>
+          <li><b>Дължина</b> – Показва теоретичната дължина на съобщението 8 байта служебни данни и 65 527 байта масимални данни.</li>
+        </ul>
+
+  		</section>
+      <section class="col-xl-2 col-lg-2 col-md-1 col-sm-1"></section>
+  	</div> <!-- End of row div -->
+
+
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
