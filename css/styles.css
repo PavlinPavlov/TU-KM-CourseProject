@@ -4,6 +4,10 @@ p, li {
 	text-justify: inter-word;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 #pageContent {
 	/* background-color: #8c8c8c; */
 	margin: 40px auto;
@@ -83,4 +87,10 @@ hr {
 
 .note-icon {
 	margin-right: 15px;
+}
+
+.link-button {
+		width: 60%;
+		display: block;
+		margin: 0 auto;
 }
