@@ -5,21 +5,26 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/tooplate-style.css">
 	<link rel="stylesheet" href="css/styles.css">
-	
+
 	<title>Пренос на данни</title>
+	<style>
+		.figure {
+			width: 50%;
+		}
+	</style>
 </head>
 <body>
 
 	<div class="row">
-	
+
 		<div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">
 
 			<button id="tmMainNavToggle" class="menu-icon">&#9776;</button>
 
 			<div class="inner">
-					
+
 				<h1><b>TPC/UDP</b></h1>
-					
+
 				<nav id="tmMainNav" class="tm-main-nav">
 					<ul>
 						<li>
@@ -33,7 +38,7 @@
 								<i class="fas fa-star tm-nav-fa-icon"></i>
 								<span>Основна информация</span>
 							</a>
-						</li>							
+						</li>
 						<li>
 							<a href="connect.html" >
 								<i class="fas fa-plug tm-nav-fa-icon"></i>
@@ -68,13 +73,32 @@
 				</nav>
 			</div>
 		</div> <!-- end of sidebar with nav -->
-		
+
 		<section id="pageContent" class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
 			<h1 class="main-header">Пренос на данни</h1>
+
+			<p>&emsp;След като се установи TCP връзка, TCP сегменти могат да се обменят между клиента и сървъра. За да се избегне загуба на данни (пакети) от грешките, породени от преноса през мрежата, TCP комуникацията използва поредни номера. Чрез него се гарантира правилната подредба на TCP сегменти. Машините от двете страни на TCP комуникацията поддържа 32-битов пореден номер. Този пореден номер се включва във всеки предаден пакет (като част  от служебните данни) и се потвърждава от противоположния страна като Acknowledgement number. Чрез този механизъм се информира изпращащата машина, че предадените данни (пакет) са получени успешно.</p>
+
+			<p>&emsp;Когато получаващата страна потвърди полуаването на пакет със Sequence number = n, това означава, че тя е обработила всички оакето до n - 1.</p>
+
+			<div id="fig-1" class="figure">
+				<img src="img/tcp-transfer.png" />
+				<span>Фиг. 1 Трансфер на данни при TCP.</span>
+			</div>
+
+			<hr>
+
+			<p>&emsp;За разлика от TCP, UDP не гарантира, че пакетите ще стигнат до правилните дестинации. Това означава, че UDP не се свързва директно с приемащия компютър - което TCP прави. По-скоро той изпраща данните и разчита на устройствата между изпращащата и приемащата машини, за да получи правилно данните там, където трябва да отидат.</P>
+			<p>&emsp;UDP използва по-прост модел на предаване, който не включва „ръкостискането“, за да осигури надеждността, подреждането и целостта на данните. Следователно UDP е ненадеждна и пакетите могат да пристигнат в неизправност, да имат дубликати или да изчезнат без предупреждение.</p>
+
+			<div id="fig-2" class="figure">
+				<img src="img/udp-transfer.png" />
+				<span>Фиг. 2 Трансфер на данни при UDP.</span>
+			</div>
 		</section>
 	</div> <!-- End of row div -->
-	
-	
+
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script></body>
 
