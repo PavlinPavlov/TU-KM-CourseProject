@@ -115,3 +115,15 @@ hr {
 	margin: 0 auto 15px auto;
 	cursor: pointer;
 }
+
+#button-navigation {
+	position: fixed;
+	width: 20%;
+	margin-top: 5%;
+}
+
+.nav-button {
+	width: 100%;
+	margin: 0 auto 15px 5%;
+	cursor: pointer;
+}

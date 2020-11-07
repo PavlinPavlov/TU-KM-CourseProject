@@ -12,15 +12,24 @@
   </head>
   <body>
   	<div class="row">
-      <section class="col-xl-2 col-lg-2 col-md-1 col-sm-1">
-        <div id="direct-home"><a href="index.html"><i class="fas fa-home"></i>Начало</a></div>
+
+      <section class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+        <div id="button-navigation">
+          <button onclick="window.location='index.html'" type="button" class="btn btn-primary nav-button"><i class="fas fa-home"></i>&emsp;Начало</button>
+          <button onclick="window.history.back()" type="button" class="btn btn-secondary nav-button"><i class="fas fa-arrow-left"></i>&emsp;Назад</button>
+        </div>
       </section>
-  		<section id="pageContent" class="col-xl-8 col-lg-8 col-md-10 col-sm-10">
+
+  		<section id="pageContent" class="col-xl-7 col-lg-7 col-md-9 col-sm-9">
+
+        <h1 class="main-header">Контрол на потока</h1>
+
   			<p>&emsp;За да сглоби съобщението, получателят записва получените пакети в буфер. При препълване на буфера ще се загубят данни, които ще бъдат изпратени повторно. Това ще доведе до ненужно натоварване на връзката. За да се реши този проблем се използва контрол на потока от данни.</p>
         <p>&emsp;Контролът на потока (flow control) по същество означава, че TCP ще гарантира, че подателят не претоварва приемника, като изпраща пакети по-бързо, отколкото може да консумира. Това е доста подобно на това, което обикновено се нарича back pressure в разпределените системи. Идеята е, че машината, която получава данни, ще изпрати някаква обратна връзка до подателя, за да го уведоми за текущото си състояние.</p>
         <p>&emsp;Това се осъществява посредством Window полето в служебните данни. То се изпраща от получателя и съдържа свободното пространство в буфера. Изпращащата стана ограничава изпратените данни спрямо стойността на това поле. </p>
   		</section>
-      <section class="col-xl-2 col-lg-2 col-md-1 col-sm-1"></section>
+      
+      <section class="col-xl-2 col-lg-2 col-md-0 col-sm-0"></section>
   	</div> <!-- End of row div -->
 
 
