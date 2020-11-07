@@ -42,10 +42,11 @@ h1.main-header {
 	margin-bottom: 50px;
 	font-weight: 800;
 	font-size: 55px;
+	font-weight: bold;
 }
 
 h2 {
-	color: #bbf6fa;
+	color: #bbd7fa;
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 15px;
@@ -74,23 +75,43 @@ hr {
   background-color: #ffffff;
 }
 
-.note {
-		display: block;
+.note_panel {
 		margin: 20px auto;
-		padding: 15px 30px;
+		padding: 15px 10px;
 		width: 75%;
 		color: #ffffff;
-		background-color: #ffa526;
+		background-color: #fca830;
 		font-size: 16px;
-		border-radius: 15px;
+		border-left: solid #ab6400 6px;
+		border-top-right-radius: 45px;
+		border-bottom-right-radius: 45px;
 }
 
-.note-icon {
-	margin-right: 15px;
+.note-img {
+	width: 150%;
 }
 
-.link-button {
-		width: 60%;
-		display: block;
-		margin: 0 auto;
+.more_info_panel {
+	padding: 20px;
+	border-left: solid #218ffc 6px;
+	background: #bbd7fa;
+	border-top-right-radius: 45px;
+	border-bottom-right-radius: 45px;
+}
+
+.info-img {
+	width: 100%;
+}
+
+.more_info h3 {
+	color: #218ffc;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.more_info button {
+	width: 75%;
+	display: block;
+	margin: 0 auto 15px auto;
+	cursor: pointer;
 }

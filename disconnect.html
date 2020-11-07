@@ -10,6 +10,12 @@
 	<title>Прекъсване на връзка</title>
 
 	<link rel="icon" href="img/icon.png">
+
+	<style>
+		#fig-1 {
+		  width: 65%;
+		}
+	</style>
 </head>
 <body>
 
@@ -80,7 +86,19 @@
 			<ul>
 				<li>Машина 1 изпраща FIN пакет към Машина 2 (възможно е да бъдат изпратени и данни) и чака да получи FIN пакет. Времето, през което чака, се нарича FIN WAIT. През това време е възможно да започне освобождаването на ресурси.</li>
 				<li>Машина 2 получава FIN пакета и връща веднага ACK пакет. Започва да освобождава ресурси и при приключване изпраща също FIN пакет към Машина 1. Това време се нарича Close Wait.</li>
-				<span class="note"><i class="far fa-sticky-note note-icon"></i><b>Забележка:</b><br/>&emsp;По време на Close Wait Машина 1 е прекратила само изпращането, но не и получаването на данни. Трансфера на информация от Машина 2 към Машина 1 се поддържа докато и двете страни не изпратят FIN пакет.</span>
+
+				<section class="note_panel row">
+
+					<div class="col-xl-2 col-lg-2 col-md-3 col-sm-3" >
+						<img src="img/note.png" class="note-img" />
+					</div>
+
+					<div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 note">
+						<h3>Бележка</h3>
+						<p>По време на Close Wait Машина 1 е прекратила само изпращането, но не и получаването на данни. Трансфера на информация от Машина 2 към Машина 1 се поддържа докато и двете страни не изпратят FIN пакет.</p>
+					</div>
+				</section>
+
 				<li>След като Машина 2 изпрати своя FIN пакет, чака да получи ACK пакет от Машина 1 – Last Ack Wait.</li>
 				<li>Машина 1 получава FIN пакета и изпраща ACK пакет обратно. Вече може да освободи всички оставащи ресурси, но трябва да изчака още (определен timeout), защото има вероятност да се наложи да изпрати ACK пакета повторно.</li>
 				<li>Машина 2 получава ACK пакета и окончателно може да терминира връзката.</li>
@@ -91,7 +109,17 @@
 				<span>Фиг. 1 Прекъсване на връзка при TCP.</span>
 			</div>
 
-			<a href="headers.html"><button type="button" class="btn btn-info btn-lg link-button">Допълнителна информация за служебните данни</button></a>
+			<section class="more_info_panel row">
+
+				<div class="col-xl-2 col-lg-2 col-md-3 col-sm-3" >
+					<img src="img/info.png" class="info-img" />
+				</div>
+
+				<div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 more_info">
+					<h3>Допълнителна информация</h3>
+					<button onclick="window.location='headers.html'" type="button" class="btn btn-info btn-lg">Служебните данни</button>
+				</div>
+			</section>
 
 		</section>
 	</div> <!-- End of row div -->

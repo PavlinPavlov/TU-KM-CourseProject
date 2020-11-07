@@ -10,6 +10,16 @@
 	<title>Установяване на връзка</title>
 
 	<link rel="icon" href="img/icon.png">
+
+	<style>
+		#fig-1 {
+		  width: 50%;
+		}
+
+		.bullet {
+		  color: #ffffff;
+		}
+	</style>
 </head>
 <body>
 
@@ -75,10 +85,12 @@
 		<section id="pageContent" class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
 			<h1 class="main-header">Установяване на връзка</h1>
 
+			<h2>UDP Протоколът</h2>
 			<p>&emsp; UDP протоколът не осъществява връзка с получателя на пакетите. Изпращачът на данни не е заинтересован от конусмацията на пакетите, а само от изпращането им.</p>
 
 			<hr>
 
+			<h2>TCP Протоколът</h2>
 			<p>&emsp;За разлика от UDP, при комуникация с TCP е необходимо да се установи връзка, преди да започне препращането на данни. Комуникация се осъществява посредством сокети (sockets), които се явяват крайна точка на комуникация.</p>
 
 			<ul>
@@ -94,7 +106,15 @@
 				<span>Фиг. 1 Установяване на връзка при TCP.</span>
 			</div>
 
-			<a href="headers.html"><button type="button" class="btn btn-info btn-lg link-button">Допълнителна информация за служебните данни</button></a>
+			<section class="more_info_panel row">
+
+				<img src="img/info.png" class="col-xl-2 col-lg-2 col-md-3 col-sm-3" />
+
+				<div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 more_info">
+					<h3>Допълнителна информация</h3>
+					<button onclick="window.location='headers.html'" type="button" class="btn btn-info btn-lg link-button">Служебните данни</button>
+				</div>
+			<section>
 		</section>
 	</div> <!-- End of row div -->
 
