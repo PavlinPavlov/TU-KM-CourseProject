@@ -80,9 +80,22 @@
 		<section id="pageContent" class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
 			<h1 class="main-header">Пренос на данни</h1>
 
+			<h2>TCP Протоколът</h2>
+
 			<p>&emsp;След като се установи TCP връзка, TCP сегменти могат да се обменят между клиента и сървъра. За да се избегне загуба на данни (пакети) от грешките, породени от преноса през мрежата, TCP комуникацията използва поредни номера. Чрез него се гарантира правилната подредба на TCP сегменти. Машините от двете страни на TCP комуникацията поддържа 32-битов пореден номер. Този пореден номер се включва във всеки предаден пакет (като част  от служебните данни) и се потвърждава от противоположния страна като Acknowledgement number. Чрез този механизъм се информира изпращащата машина, че предадените данни (пакет) са получени успешно.</p>
 
-			<p>&emsp;Когато получаващата страна потвърди полуаването на пакет със Sequence number = n, това означава, че тя е обработила всички оакето до n - 1.</p>
+
+			<section class="note_panel row">
+
+				<div class="col-xl-2 col-lg-2 col-md-3 col-sm-3" >
+					<img src="img/note.png" class="note-img" />
+				</div>
+
+				<div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 note">
+					<h3>Бележка</h3>
+					<p>&emsp;Когато получаващата страна потвърди полуаването на пакет със Sequence number = n, това означава, че тя е обработила всички оакето до n - 1.</p>
+				</div>
+			</section>
 
 			<div id="fig-1" class="figure">
 				<img src="img/tcp-transfer.png" />
@@ -90,6 +103,8 @@
 			</div>
 
 			<hr>
+
+			<h2>UDP Протоколът</h2>
 
 			<p>&emsp;За разлика от TCP, UDP не гарантира, че пакетите ще стигнат до правилните дестинации. Това означава, че UDP не се свързва директно с приемащия компютър - което TCP прави. По-скоро той изпраща данните и разчита на устройствата между изпращащата и приемащата машини, за да получи правилно данните там, където трябва да отидат.</P>
 			<p>&emsp;UDP използва по-прост модел на предаване, който не включва „ръкостискането“, за да осигури надеждността, подреждането и целостта на данните. Следователно UDP е ненадеждна и пакетите могат да пристигнат в неизправност, да имат дубликати или да изчезнат без предупреждение.</p>
@@ -108,7 +123,7 @@
 				<div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 more_info">
 					<h3>Допълнителна информация</h3>
 					<button onclick="window.location='headers.html'" type="button" class="btn btn-info btn-lg">Служебните данни</button>
-					<button onclick="window.location='error_correction'" type="button" class="btn btn-info btn-lg">Коригиране на грешки</button>
+					<button onclick="window.location='error_correction.html'" type="button" class="btn btn-info btn-lg">Коригиране на грешки</button>
 					<button onclick="window.location='flow_control.html'" type="button" class="btn btn-info btn-lg">Контрол на потока</button>
 				</div>
 			</section>
