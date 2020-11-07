@@ -131,3 +131,8 @@ hr {
 .bullet {
 	color: #ffffff;
 }
+
+#footer {
+	text-align: right;
+	font-style: italic
+}
