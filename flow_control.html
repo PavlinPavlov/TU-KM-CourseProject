@@ -1,0 +1,30 @@
+<html>
+  <head>
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+  	<link rel="stylesheet" href="css/fontawesome-all.min.css"> <!-- Icons -->
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/tooplate-style.css">
+  	<link rel="stylesheet" href="css/styles.css">
+
+  	<title>Контрол на потока</title>
+
+    <link rel="icon" href="img/icon.png">
+  </head>
+  <body>
+  	<div class="row">
+      <section class="col-xl-2 col-lg-2 col-md-1 col-sm-1">
+        <div id="direct-home"><a href="index.html"><i class="fas fa-home"></i>Начало</a></div>
+      </section>
+  		<section id="pageContent" class="col-xl-8 col-lg-8 col-md-10 col-sm-10">
+  			<p>&emsp;За да сглоби съобщението, получателят записва получените пакети в буфер. При препълване на буфера ще се загубят данни, които ще бъдат изпратени повторно. Това ще доведе до ненужно натоварване на връзката. За да се реши този проблем се използва контрол на потока от данни.</p>
+        <p>&emsp;Контролът на потока (flow control) по същество означава, че TCP ще гарантира, че подателят не претоварва приемника, като изпраща пакети по-бързо, отколкото може да консумира. Това е доста подобно на това, което обикновено се нарича back pressure в разпределените системи. Идеята е, че машината, която получава данни, ще изпрати някаква обратна връзка до подателя, за да го уведоми за текущото си състояние.</p>
+        <p>&emsp;Това се осъществява посредством Window полето в служебните данни. То се изпраща от получателя и съдържа свободното пространство в буфера. Изпращащата стана ограничава изпратените данни спрямо стойността на това поле. </p>
+  		</section>
+      <section class="col-xl-2 col-lg-2 col-md-1 col-sm-1"></section>
+  	</div> <!-- End of row div -->
+
+
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
